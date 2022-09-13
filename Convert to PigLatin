@@ -1,0 +1,14 @@
+def pig_latin(text):
+  say = " "
+  temp_list =[]
+  # Separate the text into words
+  words = text.split()
+  for word in words:
+    word = word[1:] + word[0] + 'ay'
+    temp_list.append(word)
+
+  say = " ".join(temp_list) # joining the list elements into string , elements separated by space ->" "
+  return say
+
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun")) # Should be "rogrammingpay niay ythonpay siay unfay"
