@@ -1,0 +1,12 @@
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+
+newfilenames =[]
+for x in filenames:
+    my_list = x.split('.') 
+    if my_list[1] == 'hpp':
+        newfilenames.append(my_list[0]+'.h')
+    else: newfilenames.append(x)
+
+
+print(newfilenames) 
+# Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
