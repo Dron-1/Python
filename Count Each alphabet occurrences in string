@@ -1,0 +1,14 @@
+def countLetterOccurance(text):
+    result = {}
+    for letter in text:
+        if letter not in result:
+            result[letter] = 0
+        result[letter] = result[letter] +1
+    return result
+
+print(countLetterOccurance('hhhhhhh'))
+print(countLetterOccurance('DRON DRON dron'))
+
+#Result:-
+#{'h': 7}
+#{'D': 2, 'R': 2, 'O': 2, 'N': 2, ' ': 2, 'd': 1, 'r': 1, 'o': 1, 'n': 1}
